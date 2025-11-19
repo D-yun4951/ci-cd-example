@@ -1,18 +1,18 @@
 name: Simple CI Example
 
-on: [push]
+on: 
+  push:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Загрузка кода
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Проверка содержимого
+      - name: Test run
         run: |
           echo "Проверяем код..."
           ls -la
           echo "CI успешно выполнен!"
-
